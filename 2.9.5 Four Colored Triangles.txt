@@ -1,0 +1,21 @@
+speed(5)
+
+penup()
+setposition(-100,0)
+pensize(5)
+
+def draw_triangle():
+    pendown()
+    color("red")
+    forward(50)
+    backward(50)
+    left(60)
+    color("green")
+    forward(50)
+    right(120)
+    color("blue")
+    forward(50)
+    left(60)
+
+for i in range(4):
+    draw_triangle()
