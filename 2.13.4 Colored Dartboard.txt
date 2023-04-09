@@ -1,0 +1,22 @@
+speed(5)
+radius = 125
+
+def draw_circle():
+    color(color_choice)
+    pendown()
+    begin_fill()
+    circle(radius)
+    penup()
+    left(90)
+    forward(25)
+    right(90)
+    end_fill()
+
+penup()
+setposition(0,-100)
+pendown()
+
+for i in range(4):
+    radius = radius - 25
+    color_choice = input("What color should this circle be?: ")
+    draw_circle()
