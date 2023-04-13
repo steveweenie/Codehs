@@ -1,0 +1,22 @@
+speed(0)
+
+radius_user = int(input("How big will your snowman be? (in pixels): "))
+
+def draw_circle(radius_user):
+    pendown()
+    color("gray")
+    begin_fill()
+    circle(radius_user)
+    end_fill()
+    penup()
+    left(90)
+    forward(radius_user*2)
+    right(90)
+
+penup()
+setposition(0,-200)
+draw_circle(radius_user)
+radius_user = radius_user/2
+draw_circle(radius_user)
+radius_user = radius_user/2
+draw_circle(radius_user)
