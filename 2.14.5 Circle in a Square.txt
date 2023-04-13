@@ -1,0 +1,27 @@
+speed(0)
+
+radius_user = int(input("What will be the radius of the circle (in pixels): "))
+
+def draw_square(radius_user):
+    for i in range(4):
+        pendown()
+        color("red")
+        forward(radius_user*2)
+        left(90)
+        penup()
+    
+def draw_circle(radius_user):
+    pendown()
+    begin_fill()
+    color("blue")
+    circle(radius_user)
+    end_fill()
+    penup()
+    
+penup()
+setposition(-radius_user,-radius_user)
+begin_fill()
+draw_square(radius_user)
+end_fill()
+setposition(0,-radius_user)
+draw_circle(radius_user)
