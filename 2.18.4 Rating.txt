@@ -1,0 +1,36 @@
+speed(3)
+pensize(10)
+
+def draw_stick():
+    forward(50)
+    backward(100)
+    forward(50)
+
+def draw_x():
+    color("red")
+    left(45)
+    draw_stick()
+    right(90)
+    draw_stick()
+
+def draw_line():
+    color("yellow")
+    draw_stick()
+
+def draw_check():
+    color("green")
+    left(45)
+    forward(50)
+    backward(100)
+    left(90)
+    forward(50)
+    backward(50)
+    
+rating = int(input("How do you rate this? (1-10): "))
+
+if rating <= 4:
+    draw_x()
+elif rating <=7:
+    draw_line()
+else: 
+    draw_check()
