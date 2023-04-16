@@ -1,0 +1,48 @@
+speed(3)
+pensize(10)
+
+def draw_check():
+    color("green")
+    left(45)
+    forward(50)
+    backward(100)
+    left(90)
+    forward(50)
+    backward(50)
+    
+def draw_uparrow():
+    color("red")
+    left(90)
+    forward(50)
+    right(45)
+    backward(25)
+    forward(25)
+    right(90)
+    forward(25)
+    left(45)
+
+def draw_downarrow():
+    color("red")
+    left(90)
+    backward(50)
+    right(45)
+    forward(25)
+    backward(25)
+    left(90)
+    forward(25)
+    right(135)
+    
+user_number = int(input("Pick a Number 1-10: "))
+secret_number = 8
+
+while user_number != secret_number:
+    if user_number >= 9:
+        draw_uparrow()
+    else:
+        draw_downarrow()
+    user_number = int(input("Pick a Number 1-10: "))
+    clear()
+    penup()
+    setposition(0,0)
+    pendown()
+draw_check()
